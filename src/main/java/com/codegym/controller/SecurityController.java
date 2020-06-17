@@ -40,4 +40,15 @@ public class SecurityController {
         model.addAttribute("user", getPrincipal());
         return "admin";
     }
+
+    @RequestMapping(value = "/Access_Denied", method = RequestMethod.GET)
+    public String accessDeniedPage(ModelMap model) {
+        model.addAttribute("user", getPrincipal());
+        return "accessDenied";
+    }
+    @RequestMapping(value = "/dba", method = RequestMethod.GET)
+    public String dbaPage(ModelMap model) {
+        model.addAttribute("user", getPrincipal());
+        return "dba";
+    }
 }
